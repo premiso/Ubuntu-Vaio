@@ -9,6 +9,6 @@ dselect
 -------------------------
 Some key points, the etc/default/grub  has the touchpad fix (i8042.nopnp). It has some extras that was supposed to be fore sleep/hibernate fix, but that is fixed in etc/pm/sleep.d
 
-The Xorg conf I have is for my setup as I do not have two monitors to connect to this and I generally use it with one monitor and the laptop lid closed. Note the disper helps with this. disper -s == primary monitor and disper -S == secondary monitor. 
+Remember to download and install the latest NVIDIA drivers. The Xorg conf I have is for my setup as I do not have two monitors to connect to this and I generally use it with one monitor and the laptop lid closed. Note the disper helps with this. disper -s == primary monitor and disper -S == secondary monitor. 
 
 The xterm in the bin is simply because I could not get the color preferences to stick, so I made it a shell script to call xterm with the defaults, seems to work just fine.
