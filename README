@@ -1,5 +1,5 @@
 This is a simple project to keep track of the files and setting I needed to change
-in order to get Ubuntu Working on the Sony Vaio. This setup is for Ubuntu 10.10.
+in order to get Ubuntu Working on the Sony Vaio F11 VPCF Series. This setup is for Ubuntu 10.10. If I get a chance, I may post how to patch the Kernel, although I had mix results with the Kernel patch where it made the fan and system run hotter then without the patch. I may try a few different kernel settings see if I can't fix that.
 
 To install the packages from the list but besure to have the apt/sources.list copied and performed an apt-get update:
 dpkg --set-selections < installed-software
