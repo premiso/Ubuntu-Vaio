@@ -1,0 +1,9 @@
+#!/bin/sh
+
+ifconfig usb0 up
+sleep 1
+killall dhcpcd
+dhcpcd usb0
+sleep 1
+echo "USB Started"
+xmodmap /home/frost/modmap

@@ -1,0 +1,15 @@
+#!/bin/sh
+#My script to bring up my wireless
+echo "Killing wpa_supplicant, if running"
+killall wpa_supplicant
+echo "Killin dhcpcd, if running"
+killall dhcpcd
+echo "Bringing up WLAN0"
+ifconfig wlan0 up
+sleep 1
+echo "Starting the wpa_supplicant"
+wpa_supplicant -Dwext -iwlan0 -c /etc/wpa_supplicant.conf &
+sleep 1
+echo "Getting a DHCP lease from the network"
+dhcpcd wlan0
+echo "Wireless Started"

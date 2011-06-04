@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/bin/xterm-2 -C -fg grey -bg black

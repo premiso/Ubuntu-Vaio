@@ -1,0 +1,14 @@
+This is a simple project to keep track of the files and setting I needed to change
+in order to get Ubuntu Working on the Sony Vaio. This setup is for Ubuntu 10.10.
+
+To install the packages from the list but besure to have the apt/sources.list copied and performed an apt-get update:
+dpkg --set-selections < installed-software
+dselect
+
+
+-------------------------
+Some key points, the etc/default/grub  has the touchpad fix (i8042.nopnp). It has some extras that was supposed to be fore sleep/hibernate fix, but that is fixed in etc/pm/sleep.d
+
+The Xorg conf I have is for my setup as I do not have two monitors to connect to this and I generally use it with one monitor and the laptop lid closed. Note the disper helps with this. disper -s == primary monitor and disper -S == secondary monitor. 
+
+The xterm in the bin is simply because I could not get the color preferences to stick, so I made it a shell script to call xterm with the defaults, seems to work just fine.

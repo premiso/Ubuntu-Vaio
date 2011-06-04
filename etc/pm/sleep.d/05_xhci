@@ -1,0 +1,12 @@
+#!/bin/sh
+# Fix some issues with USB3
+
+if [ "$1" = "suspend" ]
+then
+        modprobe -r xhci_hcd
+fi
+
+if [ "$1" = "resume" ]
+then
+        modprobe xhci_hcd
+fi

@@ -1,0 +1,24 @@
+Usage
+Download nmaster.c into the source directory of dwm.
+Add nmaster default value to your config.h.
+Include nmaster.c in config.h after the definition of nmaster.
+Add ntile and/or nbstack to your layouts.
+Add keybindings to incnmaster and/or setnmaster to your config.h.
+Example
+static const int nmaster = 2;  /* default number of clients in the master area */
+
+#include "nmaster.c"
+
+static const Layout layouts[] = {
+    /* symbol     arrange function */
+    { "-|=",      ntile },
+    { "-|-",      nbstack },
+...
+
+static Key keys[] = {
+    /* modifier                     key        function        argument */
+    { MODKEY,                       XK_a,      incnmaster,     {.i = +1 } },
+    { MODKEY,                       XK_z,      incnmaster,     {.i = -1 } },
+    { MODKEY,                       XK_x,      setnmaster,     {.i = 2 } },
+    { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0] } },
+    { MODKEY,                       XK_b,      setlayout,      {.v = &layouts[1] } },
